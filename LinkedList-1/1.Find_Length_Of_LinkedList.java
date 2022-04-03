@@ -1,7 +1,8 @@
-For a given singly linked list of integers, find and return its length. Do it using an iterative method.
+/*
 
+For a given singly linked list of integers, find and return its length. Do it using an iterative method
 
-
+*/
 
 
 
