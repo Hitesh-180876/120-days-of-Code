@@ -11,7 +11,7 @@ public class Node {
 }
 
 
-
+/* NEW CLASS */
 package linkedList1;
 
 import java.util.Scanner;
