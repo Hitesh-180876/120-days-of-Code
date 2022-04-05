@@ -13,18 +13,20 @@ public class InsertNodeLL {
 			return head;
 		}
 		
-		if(head == null) {
+		Node temp = head;
+		
+		int currPos = 0;
+		while(temp != null && currPos < (pos-1)) {
+			temp = temp.next;
+			currPos+=1;
+		}
+		
+		if(temp == null) {
 			return head;
 		}
 		
-		int prev = 0;
-		while(head != null && prev < pos-1) {
-			head = head.next;
-			prev+=1;
-		}
-		
-		currNode.next = head.next;
-		head.next = currNode;
+		currNode.next = temp.next;
+		temp.next = currNode;
 		
 		return head;
 		
@@ -62,11 +64,10 @@ public class InsertNodeLL {
 	}
 	public static void main(String[] args) {
 		Node head = takeInput();
-		Node Head = insertNodeLL(head, 2, 10);
+		Node Head = insertNodeLL(head, 3, 10);
 		
 		printLL(Head);
 	//	insertNodeLL(head, 2, 10);
 	}
 
 }
-
