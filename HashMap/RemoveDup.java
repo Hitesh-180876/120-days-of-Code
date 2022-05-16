@@ -1,4 +1,8 @@
-/* remove Duplicate elements from array using HashMap */
+/* remove Duplicate elements from array using HashMap
+	Time Complexity : O(N)
+	Space Complexity : O(N)
+
+*/
 
 
 
