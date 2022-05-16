@@ -1,4 +1,11 @@
+/* Minimum cost path using dynamic programming 
+Time Comlexity : O(N)
+Space Complexity : O(N)
+
+*/
+
 package arrays;
+
 
 public class Mincostpath {
 	public static int Mincost(int[][] arr) {
