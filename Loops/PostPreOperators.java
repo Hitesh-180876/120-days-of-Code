@@ -7,10 +7,10 @@ public class PostPreOperators {
 		int j=1;
 		int k=1;
 		int l=1;
-		System.out.println(i++ +""+ j++);
-		System.out.println(k-- +""+ l--);
-		System.out.println(--i +""+ --j);
-		System.out.println(++i +""+ ++j);
+		System.out.println(i++ +""+ j++); // post increment use old value;
+		System.out.println(k-- +""+ l--); // post decrement use old value;
+		System.out.println(--i +""+ --j); // pre increment use new value and print the new value after subtracting 1
+		System.out.println(++i +""+ ++j); // pre increment use new value and print the new value after adding 1
 		
 	}
 
