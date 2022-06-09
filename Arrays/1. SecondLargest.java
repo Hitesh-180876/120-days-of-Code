@@ -7,8 +7,8 @@ class Solution
         int first = Integer.MIN_VALUE;
         int second = Integer.MIN_VALUE;
         for(int i=0; i<N; i++){
-            if(A[i]>first){
-                second = first;
+            if(A[i]>first){    
+                second = first; //swap both numbers
                 first = A[i];
             }
             else if(A[i]>second && A[i] != first)  // This is used for finding the element between first and second 
