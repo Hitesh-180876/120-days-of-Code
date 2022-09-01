@@ -1,59 +1,55 @@
-
 package stack;
 
 public class StackUsingArray {
+	//push
+	//pop
+	//top
+	//isEmpty
+	//size
+	
 	private int data[];
 	private int topIndex;
 	
 	public StackUsingArray() {
-		data = new int[10];
+		data = new int[3];
 		topIndex = -1;
 	}
 	
+	public int size() {
+		return topIndex+1;
+
+	}
+	
 	public boolean isEmpty() {
+		return (topIndex == -1) ? true : false;
+	}
+	
+	public int top() {
 		if(topIndex == -1) {
-			return true;
+			return 0;
 		}
-		return false;	
+		else {
+			return data[topIndex];
+		}
 	}
 	
 	public void push(int ele) throws StackFullException {
-		if(topIndex == data.length-1) {
-//			StackFullException e = new StackFullException();
-//				throw e;
+		if(topIndex != data.length-1) {
+			data[++topIndex] = ele;
+		}
+		else {
 			throw new StackFullException();
 		}
-		data[topIndex+1] = ele;
-		
 	}
-	
-	public int top() throws StackEmptyException {
-		if(topIndex == -1) {
-			StackEmptyException e = new StackEmptyException();
-				throw e;
-			
-		}
-		return data[topIndex];
-		
-	}
-
 	
 	public int pop() throws StackEmptyException {
-		if(topIndex == -1) {
-			throw new StackEmptyException();
+		if(topIndex != -1) {
+			int temp = data[topIndex];
+			topIndex--;
+			return temp;
 		}
-		int temp = data[topIndex];
-		topIndex--;
-		return temp;
+		throw new StackEmptyException();
 	}
 	
-	
-	public int size() {
-		
-		return topIndex+1;
-		
-	}
-	
-	
-	
+
 }
