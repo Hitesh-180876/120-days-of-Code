@@ -10,8 +10,8 @@ public class StackUsingArray {
 	private int data[];
 	private int topIndex;
 	
-	public StackUsingArray() {
-		data = new int[3];
+	public StackUsingArray(int n) {
+		data = new int[n];
 		topIndex = -1;
 	}
 	
@@ -21,7 +21,7 @@ public class StackUsingArray {
 	}
 	
 	public boolean isEmpty() {
-		return (topIndex == -1) ? true : false;
+		return (topIndex == -1) ? true : false; //ternary operator is ?
 	}
 	
 	public int top() {
